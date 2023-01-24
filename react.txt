@@ -1,0 +1,34 @@
+React -> Framework de javascript -> Framework de SPA -> É uma ferramenta de trabalho
+
+-> Node -> roda o javascript na nossa máquina -> javascript por padrão roda apenas no navegador
+-> Engine --> responsável por entender e rodar o javascript no navegador -> V8 é o engine usado no Chrome
+
+-> NPM (Node Package Manager) -> instalar e manipular pacotes na sua máquina --> Pacotes são códigos externos que entregam uma funcionalidade
+
+-> NPX -> create-react-app
+
+folder node-modules -> armazenar os pacotes externos
+folder public -> armazena os arquivos estáticos: favicon.ico, index.html
+folder src -> onde escrevemos o nosso código
+
+.gitignore -> ignorar arquivos e pastas no versionamento
+
+package-lock.json --> relatar a versão de cada pacote instalado no nosso projeto
+
+package.jason --> ele tem diversas funcionalidades, mas a principal é também relatar os pacotes que temos instalados na nossa aplicação. Também é responsável pelo armazenamento do react-scripts
+
+Hot reload -> quando alteramos o código e salvamos, a página é automaticamente carregada.
+
+-> O React é baseado em componentização (criação de blocos de código + exportação e importação). Componentes são funções que exportam JSX/HTML
+
+-> Export serve para disponibilizar uma função para outros arquivos. Import serve para utilizar estas funções exportadas. Quando usa default no export, é para indicar que único elemento exportado é o componente desejado. Se não colocar default, é possível exportar mais de um componente
+
+-> webpack & babel: duas tecnologias que juntas com o javascript dão vida ao react. Ambas já vem com configurações padrão, mas caso necessário podem ser alteradas.
+
+-> webpack (documentação -> https://webpack.js.org): serve para agrupar o código da aplicação, ou seja, bundle. Auxilia na separação do nosso código em diversos arquivos. O webpack também trabalha em conjunto com o NPM na importação de códigos dos nossos pacotes externos.
+
+-> babel (documentação -> https://babeljs.io): serve para transformar o código js novo em código js antigo, para que sua aplicação tenha compatibilidade com praticamente todos os navegadores. Transforma o JSX em funções react.
+
+-> JSX é similar ao HTML, só que para declarar classes se usa className. Só pode ser escrito dentro dp return da função App(). Fora se escreve em javascript
+    - Só se pode passar um elemento diretamente dentro do return, no caso, <div className="App"></div>. Todos os outros devem ficar dentro desta div
+    - Outra opção é usar no return a tag <React.Fragment> e dentro dela passar várias outras tags. A vantagem é que ele pode ser escrito da forma reduzida <></>
